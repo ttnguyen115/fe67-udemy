@@ -1,0 +1,23 @@
+.ude-btnWhite {
+    border-radius: 2px;
+    @include styleButtonWhite($color-trans, $color-gray-4, $pd-1, $pd-2, $color-gray-4);
+    @include styleText($color-gray-4, $fs-0, $fw-bold-1);
+   
+    &:hover {
+        @include styleButtonWhiteHover($color-black-0); 
+    }
+}
+
+.ude-btnRed {
+    @include styleButtonRed($color-red-0, $color-white-0, $pd-1, $pd-2, $border-radius, $color-trans);
+    @include styleText($color-white-0, $fs-0, $fw-bold-1);
+   
+    &:hover {
+        @include styleButtonRedHover($color-red-2); 
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+

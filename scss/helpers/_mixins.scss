@@ -1,0 +1,41 @@
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleButtonWhite($bg-color, $color, $pd-y, $pd-x, $border-color) {
+    background-color: $bg-color;
+    color: $color;
+    padding: $pd-y $pd-x;
+    border: 1px solid $border-color;
+}
+
+@mixin styleButtonWhiteHover($color) {
+    color: $color;
+}
+
+@mixin styleButtonRed($bg-color, $color, $pd-y, $pd-x, $border-radius, $border-color) {
+    background-color: $bg-color;
+    color: $color;
+    padding: $pd-y $pd-x;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    transition: all .5s;
+}
+
+@mixin styleButtonRedHover($bg-color) {
+    background-color: $bg-color;
+}
+
+@mixin responsive($screen) {
+    @if (map-has-key($map: $breakpoints, $key: $screen)) {
+        $value: map-get($map: $breakpoints, $key: $screen);
+
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "Screen is not found";
+    }
+}
