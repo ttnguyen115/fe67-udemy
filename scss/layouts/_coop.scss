@@ -1,0 +1,85 @@
+#coop {
+    p {
+        color: $color-gray-4;
+        font-size: $fs-1;
+        padding-top: 15px;
+        text-align: center;
+        margin: 0;;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .coop_logos {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 32px;
+        width: 100%;
+
+        .logo_item {
+            margin: 0 32px 8px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    padding-bottom: 22px;
+
+    .cta {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        text-align: center; 
+        padding: 28px 30px;
+
+        a {
+            padding-top: 3px;
+            font-size: 19px;
+            font-weight: $fw-bold-1;
+            line-height: 1.47;
+            color: $color-black-light;
+            text-decoration: none;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: $fw-normal;
+            line-height: 1.5em;
+            padding-top: 3px !important;
+        }
+
+        button {
+            margin-top: 1em;
+            font-size: $fs-0;
+            font-weight: $fw-bold-1;
+            @include styleButtonRed($color-red-0, $color-white-0, 11px, 12px, $border-radius, $color-trans);
+            
+            &:hover {
+                @include styleButtonRedHover($color-red-2);
+            }
+        }
+    }
+
+    .instructor {
+        border-right: 1px solid $color-gray-6;
+    }
+
+    .instructor_content,
+    .business_content {
+        max-width: 400px;
+    }
+}
+
+@include responsive('small') {
+    .wrapper {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,107 @@
+#feedback {
+    .container {
+        padding: 32px 16px;
+
+        h3 {
+            font-size: $fs-3;
+            font-weight: $fw-bold-1;
+            line-height: 1.33;
+            color: $color-black-0;
+        }
+    }
+}
+
+.slick_slider {
+    position: relative;
+}
+
+.slick_list {
+    position: relative;
+    margin-top: 20px;
+
+    .carousel-arrow {
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        border-width: 0;
+        box-shadow: 0 0 1px 1px rgba(20,23,28,0.1), 
+            0 3px 1px 0 rgba(20, 23, 28, 0.1);
+        color: #007791;
+        font-size: 24px;
+        height: 47px;
+        line-height: 1;
+        padding: 11px 0;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 300ms;
+        width: 47px;
+        z-index: 3;
+
+        &:hover {
+            box-shadow: 0 2px 8px 2px rgba(20, 23, 28, 0.15);
+            color: #00576b;
+        }
+    }
+
+    .prev {
+        left: -23.5px;
+    }
+
+    .next {
+        right: -12.5px;
+    }
+
+    .slick_item {
+        width: 457px;
+        outline: none;
+        height: auto;
+    }
+
+    .item_content {
+        margin-right: 13px;
+        background-color: $color-white-0;
+        border-radius: 3px;
+        box-shadow: 0 1px 2px 0 rgba(20, 23, 28, 0.15);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 260px;
+        padding: 32px;
+
+    }
+
+    .item_info {
+        font-size: $fs-0;
+        font-weight: 700;
+        line-height: 1.5em;
+        align-items: center;
+        display: flex;
+        margin-bottom: 18px;
+
+        img {
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 18px;
+            aspect-ratio: auto 64 / 64;
+            width: 64px;
+        }
+    }
+
+    .item_desc {
+        font-size: $fs-0;
+        font-weight: $fw-normal;
+        line-height: 1.5em;
+        margin: 0;
+    }
+}
+
+ul.slick-dots {
+    display: none !important;
+}
+
+@include responsive('small') {
+    .carousel-arrow {
+        display: none;
+    }
+}

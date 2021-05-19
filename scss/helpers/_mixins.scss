@@ -39,3 +39,9 @@
         @warn "Screen is not found";
     }
 }
+
+@mixin hoverList($bg-color, $border-color, $border-radius) {
+    background-color: $bg-color;
+    border-color: $border-color;
+    border-radius: $border-radius;
+}
